@@ -1,0 +1,18 @@
+{
+  "name": "weather",
+  "displayName": "weather",
+  "expo": {
+    "name": "weather",
+    "slug": "weather",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "icon": "assets/icon.png"
+  }
+}
