@@ -1,0 +1,17 @@
+{
+  "name": "timetracker",
+  "displayName": "timetracker",
+  "expo": {
+    "name": "timetracker",
+    "slug": "timetracker",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
