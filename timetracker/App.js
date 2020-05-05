@@ -1,36 +1,54 @@
 import * as React from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { View, ScrollView, StyleSheet, Text } from 'react-native';
 
-const instructions = Platform.select({
-  ios: `Press Cmd+R to reload,\nCmd+D or shake for dev menu`,
-  android: `Double tap R on your keyboard to reload,\nShake or press menu button for dev menu`,
-});
+import ToggleableForm from './components/ToggleableForm';
+import EditableTimer from './components/EditableTimer';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.welcome}>Welcome to React Native!</Text>
-      <Text style={styles.instructions}>To get started, edit App.js</Text>
-      <Text style={styles.instructions}>{instructions}</Text>
-    </View>
-  );
+export default class App extends React.Component{
+  render(){
+    return (
+      <View style={styles.appContainer}>
+        <View style={styles.appContainer}>
+          <Text style={styles.title}>Timers</Text>
+        </View>
+        <ScrollView style={styles.timerList}>
+          <ToggleableForm isOpen={false} />
+          <EditableTimer 
+            id="1"
+            title="Mow the lawn"
+            project="Kitchen Chores"
+            elapsed="3890300"
+            isRunning
+          />
+          <EditableTimer 
+            id="2"
+            title="Bake squash"
+            project="Kitchen Chores"
+            elapsed="3890985"
+            editFormOpen
+          />
+        </ScrollView>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  appContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  titleContainer: {
+    paddingTop: 35,
+    paddingBottom: 15, 
+    borderBottomWidth: 1,
+    borderBottomColor: '#D6D7DA',
   },
-  instructions: {
+  title: {
+    fontSize: 18,
+    fontWeight: 'bold',
     textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  },
+  timerList: {
+    paddingBottom: 15,
   },
 });
