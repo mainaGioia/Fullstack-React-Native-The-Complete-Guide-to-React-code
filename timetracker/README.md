@@ -10,5 +10,5 @@ https://github.com/uuidjs/uuid/issues/514
 
 
 <div align="center">
-    <img src="screens/iOS.png" height="500"/>
+    <img src="screens/ios.png" />
 </div>
