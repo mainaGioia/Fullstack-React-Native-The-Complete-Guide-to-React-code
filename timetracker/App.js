@@ -1,32 +1,49 @@
 import * as React from 'react';
 import { View, ScrollView, StyleSheet, Text } from 'react-native';
+import uuidv4 from 'uuid/v4';
 
 import ToggleableTimerForm from './components/ToggleableTimerForm';
 import EditableTimer from './components/EditableTimer';
 
 export default class App extends React.Component{
+  state = {
+    timers: [
+      {
+        title: 'Fix the windows',
+        project: 'House Chores',
+        id: uuidv4(),
+        elapsed: 5456099,
+        isRunning: true,
+      },
+      {
+        title: 'Bake squash',
+        project: 'Kitchen Chores',
+        id: uuidv4(),
+        elapsed: 1273998,
+        isRunning: false,
+      },
+    ],
+  };
   render(){
+    const { timers } = this.state;
+
     return (
       <View style={styles.appContainer}>
         <View style={styles.appContainer}>
           <Text style={styles.title}>Timers</Text>
         </View>
         <ScrollView style={styles.timerList}>
-          <ToggleableTimerForm isOpen={false} />
-          <EditableTimer 
-            id="1"
-            title="Mow the lawn"
-            project="Kitchen Chores"
-            elapsed="3890300"
-            isRunning
-          />
-          <EditableTimer 
-            id="2"
-            title="Bake squash"
-            project="Kitchen Chores"
-            elapsed="3890985"
-            editFormOpen
-          />
+          <ToggleableTimerForm/>
+          { timers.map(({ title, project, id, elapsed, isRunning }) => (
+            <EditableTimer 
+              key={id}
+              id={id}
+              title={title}
+              project={project}
+              elapsed={elapsed}
+              isRunning={isRunning}
+            />
+          ))}
         </ScrollView>
       </View>
     );
