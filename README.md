@@ -2,8 +2,6 @@
 
 This repo contains all the projects explained in the book. Feel free to star and share! :) 
  
-<br/>
-<br/>
 
 ### Weather 
 
