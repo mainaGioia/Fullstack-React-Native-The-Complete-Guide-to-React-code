@@ -12,3 +12,10 @@ The app retrieves via rest API the current weather and temperature of the chosen
     <img src="weather/screens/iOS.png" height="500"/>
 </div>
 
+### Time tracker
+
+It allows to setup tasks and track their time. 
+
+<div align="center">
+    <img src="timetracker/screens/ios.png" height="500"/>  
+</div>
