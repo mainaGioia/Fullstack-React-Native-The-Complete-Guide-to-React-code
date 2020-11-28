@@ -5,4 +5,7 @@ This repo contains all the projects explained in the book. Feel free to star and
 <br/>
 <br/>
 
-<img src="weather/screens/android.png" height="500"/>  
+<div align="center">
+    <img src="weather/screens/android.png" height="500"/>  
+    <img src="weather/screens/iOS.png" height="500"/>
+</div>
