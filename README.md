@@ -7,7 +7,7 @@ This repo contains all the projects explained in the book. Feel free to star and
 
 ### Weather 
 
-The app retrieves via rest API the current weather and temperature of the chosen city
+The app retrieves via rest API the current weather and temperature of the chosen city.
 
 <div align="center">
     <img src="weather/screens/android.png" height="500"/>  
