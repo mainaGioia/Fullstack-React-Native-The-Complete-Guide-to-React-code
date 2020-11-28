@@ -14,7 +14,7 @@ The app retrieves via rest API the current weather and temperature of the chosen
 
 ### Time tracker
 
-It allows to setup tasks and track their time. 
+Create tasks and track their time! 
 
 <div align="center">
     <img src="timetracker/screens/ios.png" height="500"/>  
