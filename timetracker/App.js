@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { View, ScrollView, StyleSheet, Text } from 'react-native';
-import uuidv4 from 'uuid/v4';
-
 import ToggleableTimerForm from './components/ToggleableTimerForm';
 import EditableTimer from './components/EditableTimer';
 
-export default class App extends React.Component{
+const { v4: uuidv4 } = require('uuid');
+
+export default class App extends React.Component{  
   state = {
     timers: [
       {

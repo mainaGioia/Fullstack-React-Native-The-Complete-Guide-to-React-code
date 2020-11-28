@@ -1,4 +1,4 @@
-import uuidv4 from 'uuid/v4';
+const { v4: uuidv4 } = require('uuid');
 
 export const millisecondsToHuman = ms => {
   const seconds = Math.floor((ms / 1000) % 60);
